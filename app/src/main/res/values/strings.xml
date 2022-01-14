@@ -99,4 +99,9 @@
     <string name="card_toggle_red">RED</string>
     <string name="card_toggle_blue">BLUE</string>
     <string name="card_toggle_green">GREEN</string>
+    <string name="message_action_success">\"Evento exitoso\"</string>
+    <string name="card_buying">Comprado</string>
+    <string name="card_to_go">Ir</string>
+    <string name="card_historial">Historial</string>
+    <string name="card_invalid_url">Invalid Url</string>
 </resources>

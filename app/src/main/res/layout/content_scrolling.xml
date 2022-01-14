@@ -16,6 +16,7 @@
         android:orientation="vertical" >
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/common_padding_min"
@@ -210,6 +211,7 @@
                     android:id="@+id/toggle_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:singleSelection="true"
                     android:layout_marginTop="@dimen/common_padding_default"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
