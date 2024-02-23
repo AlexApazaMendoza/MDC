@@ -3,8 +3,6 @@ package com.example.mdc
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
@@ -15,7 +13,6 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.mdc.databinding.ActivityScrollingBinding
-import com.google.android.material.bottomappbar.BottomAppBar
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -59,11 +56,11 @@ class ScrollingActivity : AppCompatActivity() {
                 .setAnchorView(binding.fab).show()
         }
 
-        binding.content.btnSkip?.setOnClickListener {
-            binding.content.cvAd?.visibility = View.GONE
+        binding.content.btnSkip.setOnClickListener {
+            binding.content.cvAd.visibility = View.GONE
         }
 
-        binding.content.btnBuy?.setOnClickListener {
+        binding.content.btnBuy.setOnClickListener {
             Snackbar.make(it,R.string.card_buying,Snackbar.LENGTH_LONG)
                 .setAnchorView(binding.fab)
                 .setAction(R.string.card_to_go) {
@@ -81,15 +78,15 @@ class ScrollingActivity : AppCompatActivity() {
             .into(binding.content.imgCover!!)*/
 
         with(binding.content){
-            cbEnablePass?.setOnClickListener {
-                tilPassword?.isEnabled = !tilPassword!!.isEnabled
+            cbEnablePass.setOnClickListener {
+                tilPassword.isEnabled = !tilPassword.isEnabled
             }
         }
 
         with(binding.content){
-            etUrl?.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
+            etUrl.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
                 var errorStr:String? = null
-                val url = etUrl?.text.toString()
+                val url = etUrl.text.toString()
                 if (!b){
                     when {
                         url.isEmpty() -> {
@@ -103,16 +100,16 @@ class ScrollingActivity : AppCompatActivity() {
                         }
                     }
                 }
-                tilUrl?.error = errorStr
+                tilUrl.error = errorStr
             }
         }
 
         with(binding.content){
-            binding.content.toggleButton?.addOnButtonCheckedListener { group, checkedId, isChecked ->
+            toggleButton.addOnButtonCheckedListener { _, checkedId, _ ->
                 root.setBackgroundColor(
                     when(checkedId){
-                        btnRed?.id -> Color.RED
-                        btnBlue?.id -> Color.BLUE
+                        btnRed.id -> Color.RED
+                        btnBlue.id -> Color.BLUE
                         else -> Color.GREEN
                     }
                 )
@@ -125,7 +122,7 @@ class ScrollingActivity : AppCompatActivity() {
             .load(url)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .centerCrop()
-            .into(binding.content.imgCover!!)
+            .into(binding.content.imgCover)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
