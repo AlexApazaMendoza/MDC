@@ -195,13 +195,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"/>
 
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/cpEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Apaza Mendoza"
+                    android:checkable="true"
+                    app:closeIconEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@id/slVol"
+                    app:layout_constraintStart_toStartOf="@id/tvTitleAlt"/>
+
                 <View
                     android:id="@+id/divider"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:background="@color/color_divider"
                     android:layout_marginTop="@dimen/common_padding_middle"
-                    app:layout_constraintTop_toBottomOf="@+id/slVol"
+                    app:layout_constraintTop_toBottomOf="@+id/cpEmail"
                     app:layout_constraintStart_toStartOf="@+id/tvTitleAlt"
                     app:layout_constraintEnd_toEndOf="@+id/tvTitleAlt"/>
 

@@ -132,6 +132,16 @@ class ScrollingActivity : AppCompatActivity() {
                 tvSubTitile.text = "Vol: $value"
             }
         }
+        with(binding.content){
+            cpEmail.setOnCheckedChangeListener { compoundButton, b ->
+                if(b){
+                    Toast.makeText(this@ScrollingActivity, "${compoundButton.text}", Toast.LENGTH_SHORT).show()
+                }
+            }
+            cpEmail.setOnCloseIconClickListener {
+                cpEmail.visibility = View.GONE
+            }
+        }
     }
 
     private fun loadImage(context:Context, url:String = "https://i1.wp.com/www.senpai.com.mx/wp-content/uploads/2020/07/Naruto_-Cosplay-grupal-recrea-de-forma-extraordinaria-al-Equipo-Minato.jpg?fit=1280%2C720&ssl=1"){
