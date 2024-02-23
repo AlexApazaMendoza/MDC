@@ -115,6 +115,18 @@ class ScrollingActivity : AppCompatActivity() {
                 )
             }
         }
+
+        with(binding.content){
+            swFab.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked){
+                    binding.fab.show()
+                    swFab.text = getString(R.string.card_hide_fab)
+                } else {
+                    binding.fab.hide()
+                    swFab.text = getString(R.string.card_show_fab)
+                }
+            }
+        }
     }
 
     private fun loadImage(context:Context, url:String = "https://i1.wp.com/www.senpai.com.mx/wp-content/uploads/2020/07/Naruto_-Cosplay-grupal-recrea-de-forma-extraordinaria-al-Equipo-Minato.jpg?fit=1280%2C720&ssl=1"){

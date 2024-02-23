@@ -173,6 +173,16 @@
                     app:layout_constraintStart_toStartOf="@+id/tvTitleAlt"
                     app:layout_constraintTop_toBottomOf="@+id/tilPassword"/>
 
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_hide_fab"
+                    android:checked="true"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitleAlt"
+                    app:layout_constraintTop_toTopOf="@id/cbEnablePass"
+                    app:layout_constraintBottom_toBottomOf="@id/cbEnablePass"/>
+
                 <View
                     android:id="@+id/divider"
                     android:layout_width="0dp"

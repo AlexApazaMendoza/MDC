@@ -104,4 +104,6 @@
     <string name="card_to_go">Ir</string>
     <string name="card_historial">Historial</string>
     <string name="card_invalid_url">Invalid Url</string>
+    <string name="card_hide_fab">Hide Fab</string>
+    <string name="card_show_fab">Show fab</string>
 </resources>
