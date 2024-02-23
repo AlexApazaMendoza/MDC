@@ -127,6 +127,11 @@ class ScrollingActivity : AppCompatActivity() {
                 }
             }
         }
+        with(binding.content){
+            slVol.addOnChangeListener { _, value, _ ->
+                tvSubTitile.text = "Vol: $value"
+            }
+        }
     }
 
     private fun loadImage(context:Context, url:String = "https://i1.wp.com/www.senpai.com.mx/wp-content/uploads/2020/07/Naruto_-Cosplay-grupal-recrea-de-forma-extraordinaria-al-Equipo-Minato.jpg?fit=1280%2C720&ssl=1"){
